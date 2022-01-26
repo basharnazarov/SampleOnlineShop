@@ -24,8 +24,9 @@ const style = {
 };
 
 const Cart = () => {
-  const { isEmpty, totalUniqueItems, items, updateItemQuantity, removeItem } =
-    useCart();
+  const { isEmpty, items, cartTotal, removeItem } = useCart();
+
+  console.log(items);
 
   if (isEmpty) {
     return (
@@ -42,7 +43,7 @@ const Cart = () => {
       <Link to="/">
         <button>Back to homepage</button>
       </Link>
-
+      <h3>Umumiy summa: ${cartTotal}</h3>
       <div style={style.cart}>
         {items.map((item) => {
           return (

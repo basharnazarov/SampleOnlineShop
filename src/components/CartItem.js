@@ -35,21 +35,6 @@ const CartItem = () => {
   const [error, setError] = useState(null);
   const { addItem } = useCart();
   const [value, setValue] = useState(0);
-  // const [itemId, setItemId] = useState(null);
-  // const [inputValue, setInputValue] = useState(0);
-
-  // const handleClick = (id) => {
-  //   console.log(id);
-  // };
-
-  // const handleChange = (e) => {
-  //   if (e.target.value === "undefined") {
-  //     return "";
-  //   }
-  //   console.log(e);
-  //   console.log(e.target);
-  //   setInputValue(e.target.value);
-  // };
 
   useEffect(() => {
     fakeData
@@ -65,8 +50,6 @@ const CartItem = () => {
         setLoading(false);
       });
   }, []);
-
-  // if (id === null) return "";
 
   const handleChange = (e) => {
     setValue(e.target.value);
